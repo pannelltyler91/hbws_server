@@ -17,11 +17,11 @@ app.use(
 
 //add async back in before req, res
 app.post("/create_checkout_session", async (req, res) => {
-try{
+    try{
   const session = await stripe.checkout.sessions.create({
     payment_method_types:['card'],
     mode:'payment',
-    line_items:req.body.items.map((item) => {
+    line_items:req.body.cart.map((item) => {
 
       return{
         price_data:{

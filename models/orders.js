@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   orders.init({
     customerName: DataTypes.STRING,
     customerAddress: DataTypes.STRING,
-    cart: DataTypes.ARRAY,
+    cart: DataTypes.ARRAY(DataTypes.STRING),
     total: DataTypes.INTEGER,
     paymentSuccesful: DataTypes.BOOLEAN
   }, {

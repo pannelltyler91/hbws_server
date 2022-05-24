@@ -15,7 +15,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       cart: {
-        type: Sequelize.ARRAY
+        type: Sequelize.ARRAY(Sequelize.INTEGER)
       },
       total: {
         type: Sequelize.INTEGER
